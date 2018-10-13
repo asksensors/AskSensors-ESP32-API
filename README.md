@@ -8,4 +8,4 @@ Requirements:
 
 Step-by-Step tutorials:
 -
-- HTTP GET Requests: 
+- HTTP GET Requests: https://www.instructables.com/id/How-to-Connect-an-ESP32-to-the-IoT-Cloud/
