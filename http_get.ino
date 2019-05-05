@@ -23,7 +23,7 @@ const int httpPort = 80;      // port
 void setup(){
   
   // open serial
-  Serial.begin(9600);
+  Serial.begin(115200);
   Serial.println("*****************************************************");
   Serial.println("********** Program Start : Connect ESP32 to AskSensors.");
   Serial.println("Wait for WiFi... ");
