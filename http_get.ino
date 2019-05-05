@@ -14,9 +14,10 @@ HTTPClient ask;
 // TODO: user config
 const char* ssid     = "............."; //Wifi SSID
 const char* password = "............."; //Wifi Password
-String apiKeyIn = "............."; // API Key
+const unsigned int writeInterval = 25000;   // write interval (in ms)
 
-const char* host = "asksensors.com";  // host
+// ASKSENSORS API host config
+const char* host = "api.asksensors.com";  // API host name
 const int httpPort = 80;      // port
   
 void setup(){
@@ -51,16 +52,17 @@ void loop(){
     return;
   }else {
 
-    // Create a URL for the request
-  String url = "https://asksensors.com/api.asksensors/write/";
+    // Create a URL for updating module1 and module 2
+  String url = "https://api.asksensors.com/write/";
   url += apiKeyIn;
   url += "?module1=";
   url += random(10, 100);
-  
+  url += "&module2=";
+  url += random(10, 100);
+    
   Serial.print("********** requesting URL: ");
   Serial.println(url);
- 
-   // ask.begin("https://asksensors.com/api.asksensors/write/ONKMHCC38YT74K5NGT8JC1GF8B1O9QKT?module1=100"); //Specify the URL
+   // send data 
    ask.begin(url); //Specify the URL
   
     //Check for the returning code
@@ -83,7 +85,7 @@ void loop(){
 
   client.stop();  // stop client
   
-  delay(20000);    // delay
+  delay(writeInterval);    // delay
 }
 
 
