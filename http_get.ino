@@ -53,7 +53,7 @@ void loop(){
   }else {
 
     // Create a URL for updating module1 and module 2
-  String url = "https://api.asksensors.com/write/";
+  String url = "http://api.asksensors.com/write/";
   url += apiKeyIn;
   url += "?module1=";
   url += random(10, 100);
