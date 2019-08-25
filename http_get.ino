@@ -14,6 +14,7 @@ HTTPClient ask;
 // TODO: user config
 const char* ssid     = "............."; //Wifi SSID
 const char* password = "............."; //Wifi Password
+const char* apiKeyIn = "...................";      // API KEY IN
 const unsigned int writeInterval = 25000;   // write interval (in ms)
 
 // ASKSENSORS API host config
